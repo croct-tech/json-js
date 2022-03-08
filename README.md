@@ -10,7 +10,7 @@
 </p>
 <p align="center">
     <a href="https://www.npmjs.com/package/@croct/json"><img alt="Version" src="https://img.shields.io/npm/v/@croct/json"/></a>
-    <img alt="Build" src="https://github.com/croct-tech/json-js/actions/workflows/validate-branch.yaml/badge.svg" />
+    <a href="https://github.com/croct-tech/json-js/actions/workflows/validate-branch.yaml"><img alt="Build" src="https://github.com/croct-tech/json-js/actions/workflows/validate-branch.yaml/badge.svg" /></a>
     <a href="https://codeclimate.com/repos/6227dfa7885dee01b6001407/maintainability"><img src="https://api.codeclimate.com/v1/badges/dd55cccbb345907fe572/maintainability" /></a>
     <br />
     <br />
