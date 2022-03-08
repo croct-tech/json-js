@@ -14,11 +14,11 @@
     <a href="https://codeclimate.com/repos/6227dd3bef71e701b80019c2/maintainability"><img src="https://api.codeclimate.com/v1/badges/147f6b5ec63bba3aa8ac/maintainability" /></a>
     <br />
     <br />
-    <a href="https://github.com/croct-tech/json-js/releases">📦Releases</a>
+    <a href="https://github.com/croct-tech/json-js/releases">📦 Releases</a>
     ·
-    <a href="https://github.com/croct-tech/json-js/issues/new?labels=bug&template=bug-report.md">🐞Report Bug</a>
+    <a href="https://github.com/croct-tech/json-js/issues/new?labels=bug&template=bug-report.md">🐞 Report Bug</a>
     ·
-    <a href="https://github.com/croct-tech/json-js/issues/new?labels=enhancement&template=feature-request.md">✨Request Feature</a>
+    <a href="https://github.com/croct-tech/json-js/issues/new?labels=enhancement&template=feature-request.md">✨ Request Feature</a>
 </p>
 
 ## Introduction
