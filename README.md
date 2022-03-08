@@ -30,14 +30,10 @@ This library provides types for representing arbitrary data types, both strictly
 We recommend using [NPM](https://www.npmjs.com) to install the package:
 
 ```sh
-npm install @croct-tech/json
+npm install @croct/json
 ```
 
 ## Overview
-
-The library provides the following utilities:
-
-### JSON types
 
 The types in this library include:
 
