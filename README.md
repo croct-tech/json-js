@@ -51,26 +51,6 @@ Contributions to the package are always welcome!
 - For major changes, please [open an issue](https://github.com/croct-tech/json-ts/issues) first to discuss what you would like to change.
 - Please make sure to update tests as appropriate.
 
-## Testing
-
-Before running the test suites, the development dependencies must be installed:
-
-```sh
-npm install
-```
-
-Then, to run all tests:
-
-```sh
-npm run test
-```
-
-Run the following command to check the code against the style guide:
-
-```sh
-npm run lint
-```
-
 ## Building
 
 Before building the project, the dependencies must be installed:

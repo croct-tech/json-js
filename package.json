@@ -25,7 +25,6 @@
   "homepage": "https://github.com/croct-tech/json-js",
   "scripts": {
     "lint": "eslint 'src/**/*.ts'",
-    "test": "jest -c jest.config.js --coverage",
     "validate": "tsc --noEmit",
     "build": "tsc -p tsconfig.build.json"
   },
