@@ -46,10 +46,10 @@ jobs:
         if: ${{ github.event.release.prerelease }}
         run: |-
           cd build
-          npm publish --tag next
+          npm publish --access public --tag next
 
       - name: Publish release to NPM
         if: ${{ !github.event.release.prerelease }}
         run: |-
           cd build
-          npm publish
+          npm publish --access public
