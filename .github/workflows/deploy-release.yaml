@@ -4,8 +4,6 @@ on:
   release:
     types:
       - published
-env:
-  GCLOUD_PROJECT_DEV: "croct-dev"
 
 jobs:
   deploy-release:
