@@ -2,39 +2,39 @@
  * Types representing valid JSON values.
  */
 
-import {JsonPrimitive} from './values';
+import {JsonPrimitive} from './mutable';
 
-export type JsonReadonlyObject = {readonly [key: string]: JsonReadonlyValue};
+export type ReadonlyJsonObject = {readonly [key: string]: ReadonlyJsonValue};
 
-export type JsonReadonlyArray = readonly JsonReadonlyValue[];
+export type ReadonlyJsonArray = readonly ReadonlyJsonValue[];
 
-export type JsonReadonlyStructure = JsonReadonlyArray | JsonReadonlyObject;
+export type ReadonlyJsonStructure = ReadonlyJsonArray | ReadonlyJsonObject;
 
-export type JsonReadonlyValue = JsonPrimitive | JsonReadonlyStructure;
+export type ReadonlyJsonValue = JsonPrimitive | ReadonlyJsonStructure;
 
 /*
  * Types that can be converted to JSON.
  */
 
-export type JsonReadonlyCompatibleObject = {readonly [key: string]: JsonReadonlyCompatible};
+export type ReadonlyJsonCompatibleObject = {readonly [key: string]: ReadonlyJsonCompatible};
 
-export type JsonReadonlyCompatibleArray = readonly JsonReadonlyCompatible[];
+export type ReadonlyJsonCompatibleArray = readonly ReadonlyJsonCompatible[];
 
-export type JsonReadonlyCompatibleStructure =
-    JsonReadonlyCompatibleArray
-    | JsonReadonlyCompatibleObject;
+export type ReadonlyJsonCompatibleStructure =
+    ReadonlyJsonCompatibleArray
+    | ReadonlyJsonCompatibleObject;
 
 /**
  * A class that can be serialized to JSON.
  */
-export type JsonReadonlyConvertible = {
-    toJSON(): JsonReadonlyCompatible,
+export type ReadonlyJsonConvertible = {
+    toJSON(): ReadonlyJsonCompatible,
 };
 
 /**
  * Any value that can be safely serialized to JSON using `JSON.stringify()`.
  */
-export type JsonReadonlyCompatible =
-    JsonReadonlyValue
-    | JsonReadonlyConvertible
-    | JsonReadonlyCompatibleStructure;
+export type ReadonlyJsonCompatible =
+    ReadonlyJsonValue
+    | ReadonlyJsonConvertible
+    | ReadonlyJsonCompatibleStructure;

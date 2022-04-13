@@ -41,7 +41,7 @@ The types in this library include:
 - Types for representing values that can be safely serialized to JSON using `JSON.stringify()`
 - An interface for classes that can serialize to JSON
 
-See the [source code](src/values.ts) for more information.
+See the [source code](src/mutable.ts) for more information.
 
 ## Contributing
 
