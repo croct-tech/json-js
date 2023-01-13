@@ -4,7 +4,10 @@
 
 import {JsonPrimitive} from './mutable';
 
-export type ReadonlyJsonObject = {readonly [key: string]: ReadonlyJsonValue};
+export type ReadonlyJsonObject = {
+    readonly [key: string]: ReadonlyJsonValue,
+    readonly [key: symbol]: never,
+};
 
 export type ReadonlyJsonArray = readonly ReadonlyJsonValue[];
 

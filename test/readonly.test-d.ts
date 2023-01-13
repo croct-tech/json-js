@@ -26,10 +26,13 @@ export namespace structures {
     // Explicit type structure
     expectAssignable<ReadonlyJsonValue>(type<{anyProperty: ReadonlyJsonValue}>());
     expectNotAssignable<ReadonlyJsonValue>(type<{notJson: symbol}>());
+    expectNotAssignable<ReadonlyJsonValue>(type<{[fixedSymbol]: symbol}>());
 
     // Open-ended records
     expectAssignable<ReadonlyJsonValue>(type<Record<string, ReadonlyJsonValue>>());
     expectNotAssignable<ReadonlyJsonValue>(type<Record<string, symbol>>());
+    expectNotAssignable<ReadonlyJsonValue>(type<Record<symbol, ReadonlyJsonValue>>());
+    expectNotAssignable<ReadonlyJsonValue>(type<Record<typeof fixedSymbol, ReadonlyJsonValue>>());
 }
 
 export namespace complex {

@@ -26,10 +26,13 @@ export namespace structures {
     // Explicit type structure
     expectAssignable<JsonValue>(type<{anyProperty: JsonValue}>());
     expectNotAssignable<JsonValue>(type<{notJson: symbol}>());
+    expectNotAssignable<JsonValue>(type<{[fixedSymbol]: symbol}>());
 
     // Open-ended records
     expectAssignable<JsonValue>(type<Record<string, JsonValue>>());
     expectNotAssignable<JsonValue>(type<Record<string, symbol>>());
+    expectNotAssignable<JsonValue>(type<Record<symbol, JsonValue>>());
+    expectNotAssignable<JsonValue>(type<Record<typeof fixedSymbol, JsonValue>>());
 }
 
 export namespace complex {

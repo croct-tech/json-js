@@ -4,7 +4,10 @@
 
 export type JsonPrimitive = string | number | boolean | null;
 
-export type JsonObject = {[key: string]: JsonValue};
+export type JsonObject = {
+    [key: string]: JsonValue,
+    [key: symbol]: never,
+};
 
 export type JsonArray = JsonValue[];
 
