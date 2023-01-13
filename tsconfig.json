@@ -12,11 +12,11 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "strictNullChecks": true,
+    "strict": true,
     "removeComments": false,
     "noEmit": true,
     "downlevelIteration": true,
     "declaration": true,
-    "lib": ["es6"]
   },
   "include": [
     "src/**/*.ts",

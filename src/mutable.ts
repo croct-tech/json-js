@@ -4,7 +4,10 @@
 
 export type JsonPrimitive = string | number | boolean | null;
 
-export type JsonObject = {[key: string]: JsonValue};
+export type JsonObject = Partial<{
+    [key: string]: JsonValue,
+    [key: symbol]: never,
+}>;
 
 export type JsonArray = JsonValue[];
 
@@ -16,7 +19,10 @@ export type JsonValue = JsonPrimitive | JsonStructure;
  * Types that can be converted to JSON.
  */
 
-export type JsonCompatibleObject = {[key: string]: JsonCompatible};
+export type JsonCompatibleObject = Partial<{
+    [key: string]: JsonCompatible,
+    [key: symbol]: never,
+}>;
 
 export type JsonCompatibleArray = JsonCompatible[];
 
@@ -33,6 +39,6 @@ export type JsonConvertible = {
  * Any value that can be safely serialized to JSON using `JSON.stringify()`.
  */
 export type JsonCompatible =
-    JsonValue
+    JsonPrimitive
     | JsonConvertible
     | JsonCompatibleStructure;

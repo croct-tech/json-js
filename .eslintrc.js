@@ -8,7 +8,7 @@ module.exports = {
         project: ['./tsconfig.json'],
     },
     rules: {
-        // Disable jest rules since this project doesn't need any runtime tests
+        // Disable jest rules since this project doesn't need any runtime test
         'jest/no-deprecated-functions': 'off',
     },
 };
