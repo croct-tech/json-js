@@ -19,7 +19,10 @@ export type JsonValue = JsonPrimitive | JsonStructure;
  * Types that can be converted to JSON.
  */
 
-export type JsonCompatibleObject = {[key: string]: JsonCompatible};
+export type JsonCompatibleObject = Partial<{
+    [key: string]: JsonCompatible,
+    [key: symbol]: never,
+}>;
 
 export type JsonCompatibleArray = JsonCompatible[];
 

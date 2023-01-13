@@ -108,3 +108,12 @@ export namespace readonly {
 
     expectNotAssignable<JsonValue>(type<ReadonlyJsonValue>());
 }
+
+export namespace jsonConversion {
+    interface IntoJson {
+        tag: symbol;
+        toJSON(): JsonValue;
+    }
+
+    expectNotAssignable<JsonValue>(type<IntoJson>());
+}

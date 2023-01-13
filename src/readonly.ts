@@ -19,7 +19,10 @@ export type ReadonlyJsonValue = JsonPrimitive | ReadonlyJsonStructure;
  * Types that can be converted to JSON.
  */
 
-export type ReadonlyJsonCompatibleObject = {readonly [key: string]: ReadonlyJsonCompatible};
+export type ReadonlyJsonCompatibleObject = Partial<{
+    readonly [key: string]: ReadonlyJsonCompatible,
+    readonly [key: symbol]: never,
+}>;
 
 export type ReadonlyJsonCompatibleArray = readonly ReadonlyJsonCompatible[];
 
