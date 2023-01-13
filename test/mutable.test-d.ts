@@ -58,6 +58,13 @@ export namespace complex {
 
     expectAssignable<JsonValue>(type<DiscriminatedUnion>());
 
+    type DiscriminatedUnionWithAbsentDiscriminant =
+        {type: 'foo', foo: string}
+        | {type: 'bar', bar: string}
+        | {type?: never, other: string};
+
+    expectAssignable<JsonValue>(type<DiscriminatedUnionWithAbsentDiscriminant>());
+
     type DiscriminatedUnionWithNonJsonVariant =
         {type: 'foo', foo: string}
         | {type: 'bar', bar: symbol};

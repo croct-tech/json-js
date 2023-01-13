@@ -48,6 +48,13 @@ export namespace complex {
 
     expectAssignable<ReadonlyJsonValue>(type<DisjointUnion>());
 
+    type DiscriminatedUnionWithAbsentDiscriminant =
+        {type: 'foo', foo: string}
+        | {type: 'bar', bar: string}
+        | {type?: never, other: string};
+
+    expectAssignable<ReadonlyJsonValue>(type<DiscriminatedUnionWithAbsentDiscriminant>());
+
     type DisjointUnionWithNonJsonVariant = {foo: string} | {bar: symbol};
 
     expectNotAssignable<ReadonlyJsonValue>(type<DisjointUnionWithNonJsonVariant>());

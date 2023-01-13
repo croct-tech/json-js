@@ -4,10 +4,10 @@
 
 export type JsonPrimitive = string | number | boolean | null;
 
-export type JsonObject = {
+export type JsonObject = Partial<{
     [key: string]: JsonValue,
     [key: symbol]: never,
-};
+}>;
 
 export type JsonArray = JsonValue[];
 
@@ -36,6 +36,6 @@ export type JsonConvertible = {
  * Any value that can be safely serialized to JSON using `JSON.stringify()`.
  */
 export type JsonCompatible =
-    JsonValue
+    JsonPrimitive
     | JsonConvertible
     | JsonCompatibleStructure;

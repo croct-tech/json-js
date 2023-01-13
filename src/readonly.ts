@@ -4,10 +4,10 @@
 
 import {JsonPrimitive} from './mutable';
 
-export type ReadonlyJsonObject = {
+export type ReadonlyJsonObject = Partial<{
     readonly [key: string]: ReadonlyJsonValue,
     readonly [key: symbol]: never,
-};
+}>;
 
 export type ReadonlyJsonArray = readonly ReadonlyJsonValue[];
 
@@ -38,6 +38,6 @@ export type ReadonlyJsonConvertible = {
  * Any value that can be safely serialized to JSON using `JSON.stringify()`.
  */
 export type ReadonlyJsonCompatible =
-    ReadonlyJsonValue
+    JsonPrimitive
     | ReadonlyJsonConvertible
     | ReadonlyJsonCompatibleStructure;
