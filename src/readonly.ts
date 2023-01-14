@@ -4,10 +4,10 @@
 
 import {JsonPrimitive} from './mutable';
 
-export type ReadonlyJsonObject = Partial<{
-    readonly [key: string]: ReadonlyJsonValue,
-    readonly [key: symbol]: never,
-}>;
+export type ReadonlyJsonObject = {
+    readonly [key: string]: ReadonlyJsonValue|undefined,
+    readonly [key: symbol]: never|undefined,
+};
 
 export type ReadonlyJsonArray = readonly ReadonlyJsonValue[];
 
@@ -19,10 +19,10 @@ export type ReadonlyJsonValue = JsonPrimitive | ReadonlyJsonStructure;
  * Types that can be converted to JSON.
  */
 
-export type ReadonlyJsonCompatibleObject = Partial<{
-    readonly [key: string]: ReadonlyJsonCompatible,
-    readonly [key: symbol]: never,
-}>;
+export type ReadonlyJsonCompatibleObject = {
+    readonly [key: string]: ReadonlyJsonCompatible|undefined,
+    readonly [key: symbol]: never|undefined,
+};
 
 export type ReadonlyJsonCompatibleArray = readonly ReadonlyJsonCompatible[];
 
