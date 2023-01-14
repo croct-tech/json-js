@@ -4,10 +4,10 @@
 
 export type JsonPrimitive = string | number | boolean | null;
 
-export type JsonObject = Partial<{
-    [key: string]: JsonValue,
-    [key: symbol]: never,
-}>;
+export type JsonObject = {
+    [key: string]: JsonValue|undefined,
+    [key: symbol]: never|undefined,
+};
 
 export type JsonArray = JsonValue[];
 
@@ -19,10 +19,10 @@ export type JsonValue = JsonPrimitive | JsonStructure;
  * Types that can be converted to JSON.
  */
 
-export type JsonCompatibleObject = Partial<{
-    [key: string]: JsonCompatible,
-    [key: symbol]: never,
-}>;
+export type JsonCompatibleObject = {
+    [key: string]: JsonCompatible|undefined,
+    [key: symbol]: never|undefined,
+};
 
 export type JsonCompatibleArray = JsonCompatible[];
 
