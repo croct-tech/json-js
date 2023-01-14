@@ -83,6 +83,10 @@ export namespace complex {
     expectAssignable<JsonValue>(type<MappedVariant<'bar'>>());
     expectAssignable<JsonValue>(type<MappedVariant<keyof MappedVariantMap>>());
 
+    type OptionalProperty = {foo?: string};
+
+    expectAssignable<JsonValue>(type<OptionalProperty>());
+
     type MappedVariantWithNonJsonVariantMap = {
         foo: {foo: string},
         bar: {bar: symbol},

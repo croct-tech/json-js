@@ -83,6 +83,10 @@ export namespace complex {
     expectAssignable<ReadonlyJsonCompatible>(type<MappedVariant<'bar'>>());
     expectAssignable<ReadonlyJsonCompatible>(type<MappedVariant<keyof MappedVariantMap>>());
 
+    type OptionalProperty = {foo?: string};
+
+    expectAssignable<ReadonlyJsonCompatible>(type<OptionalProperty>());
+
     type MappedVariantWithNonJsonVariantMap = {
         foo: {foo: string},
         bar: {bar: symbol},
