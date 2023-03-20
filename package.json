@@ -32,7 +32,7 @@
     "@croct/eslint-plugin": "^0.6",
     "@typescript-eslint/parser": "^5.19",
     "eslint": "^8.13",
-    "tsd": "^0.27.0",
+    "tsd": "^0.28.0",
     "typescript": "^5.0.0"
   },
   "files": [
