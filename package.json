@@ -30,7 +30,7 @@
   },
   "devDependencies": {
     "@croct/eslint-plugin": "^0.7.0",
-    "@typescript-eslint/parser": "^5.19",
+    "@typescript-eslint/parser": "^6.0.0",
     "eslint": "^8.13",
     "tsd": "^0.29.0",
     "typescript": "^5.0.0"
