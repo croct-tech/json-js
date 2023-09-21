@@ -1,6 +1,6 @@
 import {JsonValue} from './mutable';
-import {ReadonlyJsonValue} from './readonly';
+import {ReadonlyJsonCompatible} from './readonly';
 
-export const typeSafeJsonParse: (jsonString: string) => JsonValue = JSON.parse;
+export const parseJson: (jsonString: string) => JsonValue = JSON.parse;
 
-export const typedSafeStringify: (jsonValue: ReadonlyJsonValue) => string = JSON.stringify;
+export const serializeJson: (jsonValue: ReadonlyJsonCompatible) => string = JSON.stringify;
