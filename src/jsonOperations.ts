@@ -1,5 +1,5 @@
-import {JsonValue} from './mutable';
-import {ReadonlyJsonCompatible} from './readonly';
+import type {JsonValue} from './mutable';
+import type {ReadonlyJsonCompatible} from './readonly';
 
 export const parseJson: (jsonString: string) => JsonValue = JSON.parse;
 

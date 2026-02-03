@@ -29,9 +29,9 @@
     "build": "tsc -p tsconfig.build.json"
   },
   "devDependencies": {
-    "@croct/eslint-plugin": "^0.7.0",
-    "@typescript-eslint/parser": "^7.0.0",
-    "eslint": "^9.0.0",
+    "@croct/eslint-plugin": "^0.8.3",
+    "@typescript-eslint/parser": "^8.54.0",
+    "eslint": "^9.39.2",
     "tsd": "^0.31.0",
     "typescript": "^5.0.0"
   },

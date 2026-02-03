@@ -2,11 +2,11 @@
  * Types representing valid JSON values.
  */
 
-import {JsonPrimitive} from './mutable';
+import type {JsonPrimitive} from './mutable';
 
 export type ReadonlyJsonObject = {
-    readonly [key: string]: ReadonlyJsonValue|undefined,
-    readonly [key: symbol]: never|undefined,
+    readonly [key: string]: ReadonlyJsonValue | undefined,
+    readonly [key: symbol]: never | undefined,
 };
 
 export type ReadonlyJsonArray = readonly ReadonlyJsonValue[];
@@ -20,8 +20,8 @@ export type ReadonlyJsonValue = JsonPrimitive | ReadonlyJsonStructure;
  */
 
 export type ReadonlyJsonCompatibleObject = {
-    readonly [key: string]: ReadonlyJsonCompatible|undefined,
-    readonly [key: symbol]: never|undefined,
+    readonly [key: string]: ReadonlyJsonCompatible | undefined,
+    readonly [key: symbol]: never | undefined,
 };
 
 export type ReadonlyJsonCompatibleArray = readonly ReadonlyJsonCompatible[];

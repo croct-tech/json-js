@@ -5,8 +5,8 @@
 export type JsonPrimitive = string | number | boolean | null;
 
 export type JsonObject = {
-    [key: string]: JsonValue|undefined,
-    [key: symbol]: never|undefined,
+    [key: string]: JsonValue | undefined,
+    [key: symbol]: never | undefined,
 };
 
 export type JsonArray = JsonValue[];
@@ -20,8 +20,8 @@ export type JsonValue = JsonPrimitive | JsonStructure;
  */
 
 export type JsonCompatibleObject = {
-    [key: string]: JsonCompatible|undefined,
-    [key: symbol]: never|undefined,
+    [key: string]: JsonCompatible | undefined,
+    [key: symbol]: never | undefined,
 };
 
 export type JsonCompatibleArray = JsonCompatible[];
