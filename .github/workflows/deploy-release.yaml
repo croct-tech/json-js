@@ -7,9 +7,8 @@ on:
 
 jobs:
   deploy-release:
-    uses: ./.github/workflows/npm-publish.yml
+    uses: croct-tech/github-workflows/.github/workflows/publish-npm-package.yml@unify-workflows
     with:
-      node-version: "16"
       publish-access: "public"
       prepare-script: >-
         cp package.json LICENSE README.md build/ &&
